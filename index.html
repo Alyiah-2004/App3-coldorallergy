@@ -50,6 +50,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
             cold_count = cold_count + 1;
         }
 
+	function results(){
+		var resultText = document.getElementById("results");
+                resultText.innerHTML = "Probability it is allergies =" + ((allergy_count/4)*100) + "%<br> Probability it is a cold =" + ((cold_count/4)*100)+"%"; 
+
+
+
   </script>
 
 
@@ -88,7 +94,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
-	<p>TTHIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+	<p>TTTHIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -132,8 +138,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Are your symptoms seasonal or chronic?</p>    
-	<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-        <a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+        <a onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<a onclick="results();" class="w3-btn w3-black">Click for Results</a>
+		<p id="results"></p>
 	</div>
  </div>
 	
