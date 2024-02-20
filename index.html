@@ -36,20 +36,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	//these are the counters for both allergy and cold//
         var allergy_count = 0;
         var cold_count = 0;
 
-
+	//if there is one symptom correlating to allergy, it gets one//
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		//alert(allergy_count);
 
         }
-
+	//if there is one symptom correlating to cold, it gets one//
         function coldAdd(){
             cold_count = cold_count + 1;
         }
-
+	//the end result is based off the probability from the four answers//
 	function results(){
 		var resultText = document.getElementById("endresults");
                 resultText.innerHTML = "Probability it is allergies =" + ((allergy_count/4)*100) + "%<br> Probability it is a cold =" + ((cold_count/4)*100)+"%"; 
@@ -96,6 +97,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
+	<!-Question 1 is below and asks about the eyes!>
 <div class="page" id="one">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
@@ -106,7 +108,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
  </div>
+	<!-Based off the answer, either allergy or cold gets a point!>
 	
+	<!-Question 2 is below and asks about a fever!>
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h2>Question 2</h2>
@@ -118,7 +122,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
  </div>
-
+	<!-Based off the answer, either allergy or cold gets a point!>
+	
+	<!-Question 2 is below and asks about a sore throat!>
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h3>Question 3</h3>
@@ -130,7 +136,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         <a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div>
  </div>
+	<!-Based off the answer, either allergy or cold gets a point!>
 
+	<!-Question 4 is below and asks if symptoms sre seasonal or chronic!>
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h4>Question 4</h4>
@@ -140,11 +148,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<p>Are your symptoms seasonal or chronic?</p>    
 	<a onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
         <a onclick="coldAdd();" class="w3-btn w3-black">No</a>
+	<!-Based off the answer, either allergy or cold gets a point!>
 	<a onclick="results();" class="w3-btn w3-black">Click for Results</a>
 		<p id="endresults"></p>
+	
 	</div>
  </div>
-	
+	<!--results generated>
+	<!--code is complete>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
